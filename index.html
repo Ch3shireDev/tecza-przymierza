@@ -1,0 +1,202 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Tęcza Przymierza</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..600&display=swap">
+<style>
+/* Layout: one study-article column; paragraph numbers in a hanging margin; boxes set off by tint, rainbow used once at the masthead. */
+:root{
+  --paper:#fbfafd; --ink:#1f1d33; --muted:#5d5a73; --rule:#dcd8e8;
+  --accent:#4b3a9e; --box:#f1eef9; --boxrule:#cfc7ea;
+  --display:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body:"Literata", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#15131f; --ink:#ebe8f5; --muted:#a8a3bf; --rule:#34304a;
+  --accent:#b3a6f2; --box:#1f1c2e; --boxrule:#3d3760; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#15131f; --ink:#ebe8f5; --muted:#a8a3bf; --rule:#34304a;
+  --accent:#b3a6f2; --box:#1f1c2e; --boxrule:#3d3760; color-scheme:dark}
+
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.62}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 56px}
+
+.spectrum{display:flex;height:10px}
+.spectrum i{flex:1}
+.spectrum i:nth-child(1){background:#d93a3a}.spectrum i:nth-child(2){background:#ef8a2b}
+.spectrum i:nth-child(3){background:#f2cf3c}.spectrum i:nth-child(4){background:#3fa35a}
+.spectrum i:nth-child(5){background:#3672c9}.spectrum i:nth-child(6){background:#7a4bb8}
+
+header.mast{padding-block:28px 22px;border-bottom:2px solid var(--ink);display:grid;gap:6px}
+.mast h1{font-family:var(--display);font-stretch:118%;font-weight:800;font-size:clamp(2.1rem,7vw,3.4rem);letter-spacing:.04em;line-height:1;margin:0;text-transform:uppercase}
+.mast .tag{font-family:var(--display);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 14px}
+
+.meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;margin-top:34px;font-family:var(--display);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h2.title{font-family:var(--display);font-stretch:96%;font-weight:700;font-size:clamp(1.8rem,5.4vw,2.6rem);line-height:1.12;margin:14px 0 18px;text-wrap:balance}
+.theme{font-style:italic;font-size:1.05rem;color:var(--muted);margin:0 0 26px}
+.theme b{font-style:normal;color:var(--ink);font-weight:600}
+
+.learn{background:var(--box);border-top:3px solid var(--accent);padding:16px 20px;margin-bottom:34px}
+.label{font-family:var(--display);font-weight:800;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
+.learn p:last-child{margin:0}
+
+h3{font-family:var(--display);font-weight:800;font-size:.95rem;letter-spacing:.12em;text-transform:uppercase;margin:42px 0 14px;padding-top:14px;border-top:1px solid var(--rule)}
+
+.p{display:grid;grid-template-columns:2.1rem minmax(0,1fr);gap:0 6px;margin:0 0 14px}
+.p .n{font-family:var(--display);font-weight:800;font-size:.95rem;color:var(--accent);padding-top:3px;font-variant-numeric:tabular-nums}
+.p p{margin:0}
+.ref{white-space:nowrap}
+
+.q{margin:6px 0 20px 2.5rem;font-family:var(--display);font-size:.92rem;line-height:1.45;color:var(--muted);border-left:2px solid var(--rule);padding-left:12px}
+.q b{color:var(--ink)}
+
+.box{background:var(--box);border:1px solid var(--boxrule);padding:18px 20px;margin:26px 0 28px}
+.box p{margin:0 0 10px}.box p:last-child{margin:0}
+.box ul{margin:6px 0 10px;padding-left:1.2rem}
+.dialog p{display:grid;grid-template-columns:5.2rem minmax(0,1fr);gap:8px}
+.dialog .who{font-family:var(--display);font-weight:700;font-size:.85rem;padding-top:2px}
+
+figure{margin:30px 0}
+figure svg{width:100%;height:auto;display:block;background:var(--box);border:1px solid var(--boxrule)}
+figcaption{font-family:var(--display);font-size:.88rem;line-height:1.45;color:var(--muted);margin-top:8px}
+figcaption b{color:var(--ink);letter-spacing:.08em;text-transform:uppercase;font-size:.78rem}
+.ink{fill:var(--ink)} .soft{fill:var(--muted)} .ground{fill:var(--rule)}
+
+.review{border:2px solid var(--ink);padding:18px 20px;margin-top:40px}
+.review ul{margin:8px 0 0;padding-left:1.2rem;display:grid;gap:6px}
+.song{font-family:var(--display);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.82rem;margin-top:22px;color:var(--accent)}
+
+.gloss{margin-top:36px;padding-top:14px;border-top:1px solid var(--rule);font-size:.9rem;color:var(--muted)}
+.gloss p{margin:0 0 8px}.gloss b{color:var(--ink)}
+footer{margin-top:30px;font-family:var(--display);font-size:.78rem;color:var(--muted);line-height:1.5}
+
+@media (max-width:480px){
+  body{font-size:16px}
+  .q{margin-left:0}
+  .dialog p{grid-template-columns:1fr;gap:0}
+}
+</style>
+
+<div class="spectrum" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="wrap">
+
+<header class="mast">
+  <h1>Tęcza Przymierza</h1>
+  <div class="tag"><span>Zwiastuje Królestwo Miłości</span><span>Wydanie do studium</span><span>Listopad 2026</span><span>Gay Church</span></div>
+</header>
+
+<div class="meta"><span>Artykuł do studium 44</span><span>Pieśń 69 · Dumni pod łukiem</span></div>
+<h2 class="title">Tęcza nie jest dekoracją. Jest przymierzem</h2>
+<p class="theme">„Łuk mój położę na obłoku, i będzie na znak przymierza” <b>(Rdz 9:13)</b>.</p>
+
+<div class="learn">
+  <p class="label">Czego się nauczysz?</p>
+  <p>Jak Pismo Święte, czytane uważnie i z miłością, wskazuje drogę LGBT+ jako główny nurt zamierzenia Bożego. Dowiesz się też, jak okazywać cierpliwość braciom i siostrom, którzy wybrali drogę heteroseksualną.</p>
+</div>
+
+<div class="p"><span class="n">1</span><p>Każdego roku miliony ludzi spoglądają w niebo i widzą tęczę. Większość uważa ją za zjawisko optyczne. Niektórzy widzą w niej wzór na flagę. Ale ilu zatrzymuje się, by zapytać, kto ją tam umieścił i dlaczego? Pismo daje jasną odpowiedź. To sam Bóg ustanowił łuk na obłokach jako znak przymierza z całą ludzkością <span class="ref">(Rdz 9:12-16)</span>. Prawa autorskie należą do Niego.</p></div>
+<div class="p"><span class="n">2</span><p>W tym artykule rozważymy trzy pytania. Dlaczego możemy być pewni, że droga LGBT+ jest zgodna z zamierzeniem Stwórcy? Jak odpowiadać tym, którzy wyrywają wersety z kontekstu? I jak okazywać miłość tym, którzy wybrali drogę heteroseksualną?</p></div>
+<p class="q"><b>1, 2.</b> (a) Co Bóg ustanowił jako znak przymierza? (b) Jakie pytania rozważymy?</p>
+
+<h3>Stworzeni tacy, jacy jesteśmy</h3>
+<div class="p"><span class="n">3</span><p>Jezus nauczał, że niektórzy ludzie „z żywota matki tak się urodzili” i nie pasują do schematu małżeństwa nastawionego na potomstwo <span class="ref">(Mt 19:12)</span>. Zwróćmy uwagę, że nie nazwał ich pomyłką. Dodał tylko: „Kto może pojąć, niech pojmie”. Niestety, wielu do dziś nie pojęło.</p></div>
+<div class="p"><span class="n">4</span><p>Prorok Izajasz zapisał Bożą obietnicę dla eunuchów. Otrzymają oni imię „lepsze niż synowie i córki” <span class="ref">(Iz 56:4, 5)</span>. Nie „równie dobre”. Lepsze. W Dziejach Apostolskich etiopski eunuch, wykluczony dotąd z kultu, pyta Filipa, co przeszkadza, by został ochrzczony. Filip nie zwołuje komisji. Chrzci go od razu <span class="ref">(Dz 8:36-38)</span>.</p></div>
+<div class="p"><span class="n">5</span><p>Pierwszą rzeczą, którą Bóg określił jako „niedobrą”, nie była żadna konfiguracja płci, lecz samotność <span class="ref">(Rdz 2:18)</span>. Kto nakłada na innych przymusową samotność, przywraca dokładnie ten stan, który Stwórca uznał za niewłaściwy. Czy chcielibyśmy znaleźć się w takim położeniu?</p></div>
+<p class="q"><b>3-5.</b> (a) Co Jezus i Izajasz powiedzieli o osobach, które nie wpisują się w schemat reprodukcyjny? (b) Czego uczy nas przykład Filipa?</p>
+
+<h3>Zadanie wykonane</h3>
+<div class="p"><span class="n">6</span><p>Bóg polecił ludziom: „Rozradzajcie się i rozmnażajcie się, i napełniajcie ziemię” <span class="ref">(Rdz 1:28)</span>. Dziś na ziemi żyje ponad osiem miliardów ludzi. Wierny sługa wie, kiedy zadanie zostało wykonane. Może wtedy powiedzieć za Jezusem: „Uczyniliśmy, cośmy powinni byli uczynić” <span class="ref">(Łk 17:10)</span>. Dalsze napełnianie już pełnej ziemi to nie gorliwość, lecz brak rozeznania.</p></div>
+<div class="p"><span class="n">7</span><p>Zastanówmy się też nad skutkami grzechu w Edenie. Bóg zapowiedział kobiecie ból przy rodzeniu oraz to, że mąż będzie nad nią panował <span class="ref">(Rdz 3:16)</span>. Para jednopłciowa, z samego Bożego urządzenia, jest wolna od obu tych następstw. Czy to przypadek? Pomyśl o tym przy osobistym studium.</p></div>
+<p class="q"><b>6, 7.</b> (a) Dlaczego polecenie z Rodzaju 1:28 zostało wypełnione? (b) Od jakich następstw grzechu wolne są pary jednopłciowe?</p>
+
+<figure>
+  <svg viewBox="0 0 600 300" role="img" aria-label="Dwaj mężczyźni stoją pod tęczą, za płotem macha do nich sąsiad">
+    <g fill="none" stroke-width="13">
+      <path d="M60 260 A240 240 0 0 1 540 260" stroke="#d93a3a"/>
+      <path d="M73 260 A227 227 0 0 1 527 260" stroke="#ef8a2b"/>
+      <path d="M86 260 A214 214 0 0 1 514 260" stroke="#f2cf3c"/>
+      <path d="M99 260 A201 201 0 0 1 501 260" stroke="#3fa35a"/>
+      <path d="M112 260 A188 188 0 0 1 488 260" stroke="#3672c9"/>
+      <path d="M125 260 A175 175 0 0 1 475 260" stroke="#7a4bb8"/>
+    </g>
+    <rect class="ground" x="0" y="258" width="600" height="42"/>
+    <circle class="ink" cx="262" cy="168" r="15"/>
+    <rect class="ink" x="246" y="186" width="32" height="74" rx="12"/>
+    <circle class="ink" cx="310" cy="164" r="15"/>
+    <rect class="ink" x="294" y="182" width="32" height="78" rx="12"/>
+    <rect class="ink" x="274" y="204" width="24" height="7" rx="3.5"/>
+    <g class="soft">
+      <rect x="440" y="226" width="6" height="34"/><rect x="470" y="226" width="6" height="34"/>
+      <rect x="500" y="226" width="6" height="34"/><rect x="530" y="226" width="6" height="34"/>
+      <rect x="430" y="232" width="116" height="5"/>
+      <circle cx="488" cy="196" r="13"/>
+      <rect x="474" y="212" width="28" height="22" rx="10"/>
+      <rect x="497" y="190" width="7" height="28" rx="3.5" transform="rotate(25 500 204)"/>
+    </g>
+  </svg>
+  <figcaption><b>Ilustracja:</b> Brat Paweł i brat Michał po zebraniu podziwiają znak przymierza. Ich sąsiad, brat heteroseksualny, macha do nich przyjaźnie zza płotu. Każdy z nich ma swoje miejsce pod tym samym łukiem.</figcaption>
+</figure>
+
+<h3>Badaj Pisma uważnie</h3>
+<div class="p"><span class="n">8</span><p>Mieszkańcy Berei codziennie badali Pisma, by sprawdzić, czy to, co słyszą, jest prawdą <span class="ref">(Dz 17:11)</span>. Dziś niektórzy badają tylko jeden werset, i to wyłącznie ten, który pasuje do ich poglądów. Weźmy na przykład Sodomę. Biblia sama wyjaśnia, na czym polegał jej grzech: pycha, przesyt chleba i to, że nie wspierała ubogich <span class="ref">(Ez 16:49)</span>. Kazanie o Sodomie powinno więc wywoływać niepokój raczej w dzielnicach willowych niż na paradach.</p></div>
+<div class="p"><span class="n">9</span><p>Często cytuje się Kapłańską 18:22. Przeczytajmy ten werset dokładnie. Zakazuje on obcowania z mężczyzną „jak z kobietą”. Zakaz dotyczy więc naśladowania, a nie samej relacji. Zauważmy też, że ten sam zbiór praw zabrania noszenia szat utkanych z dwóch rodzajów przędzy <span class="ref">(Kpł 19:19)</span> oraz jedzenia stworzeń wodnych bez płetw i łusek <span class="ref">(Kpł 11:10)</span>. Zanim zacytujesz Kapłańską, sprawdź metkę na koszuli i zawartość talerza.</p></div>
+<div class="p"><span class="n">10</span><p>Apostoł Paweł w Liście do Rzymian opisuje ludzi, którzy porzucili Boga dla bałwanów i porzucili to, co było dla nich naturalne <span class="ref">(Rz 1:23-27)</span>. Dla osoby, która z łona matki jest homoseksualna, naturalny jest związek jednopłciowy. Warto też pamiętać, że według tego samego apostoła „sama natura” uczy, iż długie włosy przynoszą mężczyźnie ujmę <span class="ref">(1 Kor 11:14)</span>. Ilu krytyków przestrzega tej rady przed lustrem?</p></div>
+
+<div class="box dialog">
+  <p class="label">Jak byś odpowiedział?</p>
+  <p><span class="who">Tomasz</span><span>Biblia wyraźnie mówi, że to obrzydliwość. Kapłańska 18:22.</span></p>
+  <p><span class="who">Siostra Marta</span><span>Cieszę się, że czyta pan Kapłańską. Czy mogę zapytać, z czego jest pana kurtka?</span></p>
+  <p><span class="who">Tomasz</span><span>Bawełna z poliestrem. Co to ma do rzeczy?</span></p>
+  <p><span class="who">Siostra Marta</span><span>Rozdział 19, werset 19. Ta sama księga, ten sam kodeks. Chętnie przeczytamy go razem. Może przy okazji porozmawiamy o tym, dlaczego jedne przepisy pan zachowuje, a inne nie?</span></p>
+</div>
+<p class="q"><b>8-10.</b> (a) Na czym, według Ezechiela, polegał grzech Sodomy? (b) Jak dokładne czytanie Kapłańskiej 18:22 pomaga w służbie? (c) Jak odpowiedziałbyś Tomaszowi?</p>
+
+<h3>A co z „małżeństwem biblijnym”?</h3>
+<div class="p"><span class="n">11</span><p>Niektórzy przypominają, że Jezus, pytany o rozwód, mówił o mężczyźnie i kobiecie z początku stworzenia <span class="ref">(Mt 19:4-6)</span>. To prawda. Opisał jednak stan początkowy, a nie cel podróży. O czasie zmartwychwstania powiedział bowiem, że nikt nie będzie się żenił ani wychodził za mąż <span class="ref">(Mt 22:30)</span>. Paweł dodał, że w Chrystusie nie ma już mężczyzny ani kobiety <span class="ref">(Ga 3:28)</span>. Kto trzyma się wyłącznie początku, przypomina człowieka, który po wyjściu z Egiptu nie chce opuścić pierwszego postoju.</p></div>
+
+<div class="box">
+  <p class="label">Czy wiesz?</p>
+  <p>Biblia opisuje wiele form małżeństwa, które jej czytelnicy dziś pomijają milczeniem:</p>
+  <ul>
+    <li>Abraham, jego żona i niewolnica jako matka zastępcza (Rdz 16:1-4)</li>
+    <li>Jakub, dwie siostry i dwie niewolnice (Rdz 29, 30)</li>
+    <li>Salomon, 700 żon i 300 nałożnic (1 Krl 11:3)</li>
+    <li>obowiązek poślubienia wdowy po bracie (Pwt 25:5)</li>
+  </ul>
+  <p>Na tym tle para dwóch sióstr z kredytem hipotecznym i kotem wygląda na model wyjątkowo zachowawczy.</p>
+</div>
+
+<div class="p"><span class="n">12</span><p>Apostoł Paweł napisał, że „dobrze jest mężczyźnie nie dotykać kobiety” <span class="ref">(1 Kor 7:1)</span>, a żonaty jest rozdarty, bo troszczy się, jak przypodobać się żonie <span class="ref">(1 Kor 7:32-34)</span>. Księga Objawienia opisuje 144 000 wybranych, którzy „nie skalali się z kobietami” <span class="ref">(Obj 14:4)</span>. Nie wyciągamy z tego pochopnych wniosków. Zachęcamy jednak do osobistego zastanowienia się nad tymi wersetami.</p></div>
+<p class="q"><b>11, 12.</b> (a) Dlaczego Mateusza 19:4-6 opisuje początek, a nie cel? (b) Czego uczą nas przykłady małżeństw z Pism Hebrajskich?</p>
+
+<h3>Okazuj miłość braciom heteroseksualnym</h3>
+<div class="p"><span class="n">13</span><p>Czy to oznacza, że osoby heteroseksualne nie mają miejsca w zborze? Wcale nie. Paweł, choć cenił inną drogę, zezwalał na małżeństwo, bo „lepiej jest wstąpić w związek małżeński, niż płonąć” <span class="ref">(1 Kor 7:9)</span>. Postępujemy podobnie. Jeśli ktoś ma taki wybór i dokonał go w sumieniu, nie potępiamy go. „Kto je, niech nie gardzi tym, który nie je” <span class="ref">(Rz 14:3)</span>.</p></div>
+<div class="p"><span class="n">14</span><p>Pamiętajmy, że bracia heteroseksualni dźwigają szczególne ciężary: pytania rodziny o wnuki, przyjęcia z ujawnianiem płci dziecka i rozmowy z teściami o świętach. Biblia zachęca, byśmy nosili nawzajem swoje ciężary <span class="ref">(Ga 6:2)</span>. Zapraszaj ich na zebrania. Nie pytaj, kiedy w końcu się określą. Pozwól im być sobą.</p></div>
+<p class="q"><b>13, 14.</b> (a) Jak Paweł traktował tych, którzy wybierali małżeństwo? (b) Jak możemy pomagać braciom heteroseksualnym?</p>
+
+<h3>Trwaj pod łukiem</h3>
+<div class="p"><span class="n">15</span><p>Pierwsi chrześcijanie musieli zmienić zdanie w sprawie pogan. Piotr usłyszał: „Co Bóg oczyścił, ty nie miej za nieczyste” <span class="ref">(Dz 10:15)</span>. Paweł prosił Filemona, by przyjął zbiegłego niewolnika „jako brata umiłowanego” <span class="ref">(Flm 16)</span>. Pisma regulowały niewolnictwo, a mimo to dziś nikt nie broni go z Biblią w ręku. Niektórzy nazywają takie zmiany nowym światłem. My nazywamy je pełnym spektrum.</p></div>
+<div class="p"><span class="n">16</span><p>„Bóg jest miłością” <span class="ref">(1 Jana 4:8)</span>. Gdy następnym razem po deszczu zobaczysz tęczę, przypomnij sobie, kto ją tam umieścił. A jeśli ktoś zapyta cię, skąd bierzesz pewność, wskaż mu niebo.</p></div>
+<p class="q"><b>15, 16.</b> (a) Jakie zmiany przeszedł wczesny zbór? (b) Co będziesz sobie przypominać, gdy zobaczysz tęczę?</p>
+
+<div class="review">
+  <p class="label">Jak byś odpowiedział?</p>
+  <ul>
+    <li>Dlaczego tęcza jest znakiem Bożego przymierza, a nie tylko zjawiskiem optycznym?</li>
+    <li>Jak odpowiesz komuś, kto cytuje Kapłańską 18:22?</li>
+    <li>W jaki sposób możesz okazywać miłość braciom heteroseksualnym?</li>
+  </ul>
+</div>
+<p class="song">Pieśń 112 · Światło w pełnym spektrum</p>
+
+<div class="gloss">
+  <p class="label">Objaśnienie wyrażeń</p>
+  <p><b>Główny nurt:</b> droga LGBT+, którą zbór uważa za najpełniejsze wyrażenie zamierzenia Bożego, zgodnie z Rodzaju 9:13 i Mateusza 19:12.</p>
+  <p><b>Brat heteroseksualny:</b> członek zboru, który w sumieniu dokonał innego wyboru. Okazujemy mu cierpliwość i nie ustajemy w zapraszaniu go na wspólne posiłki.</p>
+  <p><b>Pełne spektrum:</b> zrozumienie, że Boże światło zawsze miało wszystkie kolory, a zmieniała się jedynie nasza zdolność ich dostrzegania.</p>
+</div>
+
+<footer>Satyra. Gay Church i „Tęcza Przymierza” nie mają żadnego związku z wydawcami czasopisma „Strażnica” ani ze Świadkami Jehowy. Cytaty biblijne za Biblią Gdańską (1632), miejscami w uproszczeniu.</footer>
+</div>
+
+</body></html>
