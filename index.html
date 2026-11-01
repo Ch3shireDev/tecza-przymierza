@@ -33,7 +33,8 @@ img{max-width:100%}
 /* cover */
 .cover{position:relative;min-height:min(92vh,760px);display:flex;flex-direction:column;justify-content:space-between;color:#fff;background:#3a3550 center/cover no-repeat;overflow:hidden}
 .cover img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,40,.55) 0%,rgba(20,16,40,0) 35%,rgba(20,16,40,0) 55%,rgba(20,16,40,.78) 100%)}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,11,30,.78) 0%,rgba(14,11,30,.35) 38%,rgba(14,11,30,.3) 55%,rgba(14,11,30,.88) 100%)}
+.cover h1,.cover .headline,.cover .tag,.cover .kicker{text-shadow:0 2px 14px rgba(0,0,0,.45)}
 .cover > *{position:relative;z-index:1}
 .cover .top,.cover .bottom{max-width:960px;width:100%;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
 .cover .top{padding-block:26px 0}
@@ -119,22 +120,58 @@ a{color:var(--accent)}
   .photo.wide{margin-left:calc(-1 * max(16px, env(safe-area-inset-left, 0px)));margin-right:calc(-1 * max(16px, env(safe-area-inset-right, 0px)))}
   .pair{grid-template-columns:1fr}
 }
+
+/* top bar + issue routing */
+.bar{position:sticky;top:env(safe-area-inset-top, 0px);z-index:20;background:var(--paper);border-bottom:1px solid var(--rule)}
+.bar .in{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;padding-block:10px;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.bar .brand{font-family:var(--display);font-weight:800;font-stretch:115%;letter-spacing:.08em;text-transform:uppercase;font-size:.9rem;color:var(--ink);text-decoration:none}
+.bar nav{display:flex;gap:4px;flex-wrap:wrap}
+.bar nav a{font-family:var(--display);font-size:.82rem;font-weight:600;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:999px}
+.bar nav a[aria-current="page"]{background:var(--ink);color:var(--paper)}
+.issue-pager{display:flex;justify-content:space-between;gap:12px;margin-top:48px;padding-top:16px;border-top:2px solid var(--ink);font-family:var(--display);font-weight:700;font-size:.9rem}
+.issue-pager a{text-decoration:none}
+/* archive */
+.arch-head{padding-top:34px}
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.mini{position:relative;aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:space-between;padding:12px;color:#fff;text-decoration:none;overflow:hidden;background:#2e2a48}
+.mini img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mini::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,11,30,.7),rgba(14,11,30,.15) 45%,rgba(14,11,30,.85))}
+.mini > span{position:relative;z-index:1}
+.mini .no{font-family:var(--display);font-weight:800;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.mini .mt{font-family:var(--display);font-weight:700;font-size:.95rem;line-height:1.2}
+.mini.c1{background:#5b2a3f}.mini.c2{background:#2c4a6b}.mini.c3{background:#3d5a3a}.mini.c4{background:#6a4a1f}.mini.c5{background:#4a2f6b}.mini.c6{background:#1f4f57}
+.mini.soon{background:transparent;color:var(--muted);border:2px dashed var(--rule)}
+.mini.soon::after{display:none}
+.mini[href]:hover .mt,.mini[href]:focus-visible .mt{text-decoration:underline}
+.note{font-size:.9rem;color:var(--muted);margin-top:12px}
+.years{list-style:none;padding:0;margin:0;display:grid;gap:0}
+.years li{padding:10px 0;border-top:1px solid var(--rule)}
+.years b{font-family:var(--display);display:inline-block;min-width:6.5rem;color:var(--accent)}
+.foot{border-top:1px solid var(--rule);margin-top:20px}
+article{scroll-margin-top:64px}
 </style>
 </head>
 <body>
 
 <div class="spectrum" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="bar"><div class="in">
+  <a class="brand" href="#nr11">Tęcza Przymierza</a>
+  <nav aria-label="Wydania">
+    <a href="#nr11">Nr 11</a><a href="#nr10">Nr 10</a><a href="#nr9">Nr 9</a><a href="#nr8">Nr 8</a><a href="#archiwum">Archiwum</a>
+  </nav>
+</div></div>
+<section class="issue" id="nr11">
 <header class="cover">
-  <img class="bg" src="https://images.unsplash.com/photo-1718138990279-97c54c2dd00e?w=1800&q=80&auto=format&fit=crop" alt="Podwójna tęcza nad zieloną łąką">
+  <img class="bg" src="https://images.unsplash.com/photo-1548475390-f6908921aaf8?w=1800&q=80&auto=format&fit=crop" alt="Tęcza nad jeziorem pod ciemnymi chmurami burzowymi">
   <div class="top">
     <h1>Tęcza<br>Przymierza</h1>
-    <div class="tag"><span>Zwiastuje Królestwo Miłości</span><span>Wydanie do studium</span><span>Listopad 2026</span></div>
+    <div class="tag"><span>Zwiastuje Królestwo Miłości</span><span>Rocznik 12 · Nr 11</span><span>Listopad 2026</span></div>
   </div>
   <div class="bottom">
     <div class="kicker">W tym wydaniu</div>
     <p class="headline">Kto umieścił tęczę na niebie i dlaczego?</p>
   </div>
-  <span class="credit">Fot. Coralie Meurice / Unsplash</span>
+  <span class="credit">Fot. David Brooke Martin / Unsplash</span>
 </header>
 
 <div class="wrap">
@@ -142,13 +179,13 @@ a{color:var(--accent)}
 <nav class="toc" aria-label="Spis treści">
   <p class="label">Spis treści</p>
   <ol>
-    <li><a href="#studium"><span class="pg">2</span><span class="t">Tęcza nie jest dekoracją. Jest przymierzem</span><span class="d">Artykuł do studium 44. Do omawiania na zebraniach w tygodniu od 7 grudnia.</span></a></li>
-    <li><a href="#zyciorys"><span class="pg">18</span><span class="t">Życiorys: Przestałem mrużyć oczy</span><span class="d">Brat Krzysztof przez dwadzieścia lat czytał jeden werset. Potem przeczytał następny rozdział.</span></a></li>
-    <li><a href="#pytania"><span class="pg">26</span><span class="t">Pytania czytelników</span><span class="d">Czy brat heteroseksualny może usługiwać jako starszy?</span></a></li>
+    <li><a href="#nr11-studium"><span class="pg">2</span><span class="t">Tęcza nie jest dekoracją. Jest przymierzem</span><span class="d">Artykuł do studium 44. Do omawiania na zebraniach w tygodniu od 7 grudnia.</span></a></li>
+    <li><a href="#nr11-zyciorys"><span class="pg">18</span><span class="t">Życiorys: Przestałem mrużyć oczy</span><span class="d">Brat Krzysztof przez dwadzieścia lat czytał jeden werset. Potem przeczytał następny rozdział.</span></a></li>
+    <li><a href="#nr11-pytania"><span class="pg">26</span><span class="t">Pytania czytelników</span><span class="d">Czy brat heteroseksualny może usługiwać jako starszy?</span></a></li>
   </ol>
 </nav>
 
-<article id="studium">
+<article id="nr11-studium">
 <div class="meta"><span>Artykuł do studium 44</span><span>Pieśń 69 · Dumni pod łukiem</span></div>
 <h2 class="title">Tęcza nie jest dekoracją. Jest przymierzem</h2>
 <p class="theme">„Łuk mój położę na obłoku, i będzie na znak przymierza” <b>(Rdz 9:13)</b>.</p>
@@ -174,8 +211,8 @@ a{color:var(--accent)}
 <p class="q"><b>3-5.</b> (a) Co Jezus i Izajasz powiedzieli o osobach, które nie wpisują się w schemat reprodukcyjny? (b) Czego uczy nas przykład Filipa?</p>
 
 <figure class="photo wide">
-  <div class="frame"><img loading="lazy" src="https://images.unsplash.com/photo-1548475390-f6908921aaf8?w=1400&q=80&auto=format&fit=crop" alt="Tęcza nad jeziorem pod ciemnymi chmurami"></div>
-  <figcaption>Nawet po burzy Bóg przypomina o swoim przymierzu. Czy ty również je pamiętasz? <span class="cr">Fot. David Brooke Martin / Unsplash</span></figcaption>
+  <div class="frame"><img loading="lazy" src="https://images.unsplash.com/photo-1718138990279-97c54c2dd00e?w=1400&q=80&auto=format&fit=crop" alt="Podwójna tęcza nad zieloną łąką"></div>
+  <figcaption>Dwa łuki, jedno przymierze. Bóg nie skąpi znaków tym, którzy patrzą w górę. <span class="cr">Fot. Coralie Meurice / Unsplash</span></figcaption>
 </figure>
 
 <h3>Zadanie wykonane</h3>
@@ -291,7 +328,7 @@ a{color:var(--accent)}
 </div>
 </article>
 
-<article id="zyciorys" class="feature">
+<article id="nr11-zyciorys" class="feature">
   <p class="label">Życiorys</p>
   <h2 class="title">Przestałem mrużyć oczy</h2>
   <p class="byline">Opowiada brat Krzysztof K. (postać fikcyjna)</p>
@@ -311,7 +348,7 @@ a{color:var(--accent)}
   </figure>
 </article>
 
-<article id="pytania" class="feature qa">
+<article id="nr11-pytania" class="feature qa">
   <p class="label">Pytania czytelników</p>
   <p class="qq">Czy brat heteroseksualny może usługiwać w zborze jako starszy?</p>
   <p>Tak. Pismo wymaga, by nadzorca był „mężem jednej żony” <span class="ref">(1 Tm 3:2)</span>. Zwróćmy uwagę, co ten werset ustala: górną granicę. Brat heteroseksualny, który ma najwyżej jedną żonę, spełnia ten warunek. Bracia w związkach jednopłciowych spełniają go z nawiązką, bo mają żon zero.</p>
@@ -324,14 +361,306 @@ a{color:var(--accent)}
 
   <p>Starsi powinni jednak brać pod uwagę szczególne okoliczności takich braci. Mogą oni potrzebować dodatkowego czasu w okresie świąt, gdy spada na nich obowiązek odwiedzenia dwóch kompletów teściów. Okazujmy im zrozumienie <span class="ref">(Kol 3:12)</span>.</p>
 </article>
+<div class="issue-pager"><a href="#nr10">← Poprzednie wydanie: Nr 10</a><a href="#archiwum">Archiwum →</a></div>
+</div>
+</section>
 
-<footer>
+<!-- ========== NR 10 ========== -->
+<section class="issue" id="nr10" hidden>
+<header class="cover">
+  <img class="bg" src="https://images.unsplash.com/photo-1593362831502-5c3ad1c05f57?w=1800&q=80&auto=format&fit=crop" alt="Tęcza nad zieloną łąką pod białymi chmurami">
+  <div class="top">
+    <h1>Tęcza<br>Przymierza</h1>
+    <div class="tag"><span>Zwiastuje Królestwo Miłości</span><span>Rocznik 12 · Nr 10</span><span>Październik 2026</span></div>
+  </div>
+  <div class="bottom">
+    <div class="kicker">W tym wydaniu</div>
+    <p class="headline">Czy Dawid i Jonatan byli tylko przyjaciółmi?</p>
+  </div>
+  <span class="credit">Fot. Stainless Images / Unsplash</span>
+</header>
+<div class="wrap">
+<nav class="toc" aria-label="Spis treści">
+  <p class="label">Spis treści</p>
+  <ol>
+    <li><a href="#nr10-studium"><span class="pg">2</span><span class="t">Miłość, która przewyższa miłość kobiet</span><span class="d">Artykuł do studium 40. Do omawiania w tygodniu od 9 listopada.</span></a></li>
+    <li><a href="#nr10-mlodzi"><span class="pg">20</span><span class="t">Młodzi pytają: „A kiedy ty?”</span><span class="d">Jak odpowiedzieć cioci na weselu kuzyna, nie raniąc jej uczuć ani nie łamiąc Mateusza 22:30.</span></a></li>
+  </ol>
+</nav>
+
+<article id="nr10-studium">
+<div class="meta"><span>Artykuł do studium 40</span><span>Pieśń 23 · Dusze spojone</span></div>
+<h2 class="title">Miłość, która przewyższa miłość kobiet</h2>
+<p class="theme">„Dusza Jonatanowa spoiła się z duszą Dawidową” <b>(1 Sm 18:1)</b>.</p>
+<div class="learn">
+  <p class="label">Czego się nauczysz?</p>
+  <p>Czego uczą nas przykłady Dawida i Jonatana oraz Rut i Noemi i dlaczego niektórzy tak bardzo się starają, żeby nazywać je przyjaźnią.</p>
+</div>
+
+<div class="p"><span class="n">1</span><p>Wyobraź sobie, że czytasz o dwóch mężczyznach. Jeden oddaje drugiemu swój płaszcz, zbroję, miecz, łuk i pas <span class="ref">(1 Sm 18:4)</span>. Zawierają przymierze, „bo miłował go jak własną duszę”. Gdy muszą się rozstać, całują się i płaczą <span class="ref">(1 Sm 20:41)</span>. Jak nazwałbyś taką relację? Wielu kaznodziejów mówi: przyjaźń. Zastanówmy się, czy taka odpowiedź oddaje sprawiedliwość Pismu.</p></div>
+<div class="p"><span class="n">2</span><p>Dawid po śmierci Jonatana napisał elegię. Wyznał w niej, że miłość Jonatana była dla niego cudowniejsza niż miłość kobiet <span class="ref">(2 Sm 1:26)</span>. Zwróćmy uwagę, że to Biblia wprowadza tu porównanie. Gdyby chodziło o zwykłą przyjaźń, porównanie z miłością kobiet byłoby zbędne.</p></div>
+<p class="q"><b>1, 2.</b> (a) Jak Pismo opisuje więź Dawida i Jonatana? (b) Jakie porównanie wprowadza Dawid w swojej elegii?</p>
+
+<h3>Co wiedział Saul?</h3>
+<div class="p"><span class="n">3</span><p>Król Saul, ojciec Jonatana, wybuchnął gniewem, gdy zrozumiał, jak bliski jest jego syn z Dawidem. Zarzucił mu, że wybrał syna Jessego ku własnej hańbie i ku hańbie nagości swojej matki <span class="ref">(1 Sm 20:30)</span>. Ciekawe, że Saul nie oskarżył syna o zdradę polityczną. Mówił o hańbie i nagości.</p></div>
+<div class="p"><span class="n">4</span><p>Nie musimy dopowiadać tego, czego tekst nie mówi. Zauważmy jednak, że reakcja Saula przypomina reakcję wielu rodziców także dzisiaj. Gniew ojca, który widzi coś, czego nie chce widzieć, nie jest nowym zjawiskiem. Pismo nie ukrywa takich scen. Pokazuje je, abyśmy mogli się z nich uczyć.</p></div>
+<p class="q"><b>3, 4.</b> Czego możemy się nauczyć z reakcji Saula?</p>
+
+<figure class="photo wide">
+  <div class="frame"><img loading="lazy" src="https://images.unsplash.com/photo-1533000971552-6a962ff0b9f9?w=1400&q=80&auto=format&fit=crop" alt="Książka na stole nad wodą"></div>
+  <figcaption>Czytając historię Dawida, nie zatrzymuj się na rozdziale 17. Najciekawsze dzieje się później. <span class="cr">Fot. Aaron Burden / Unsplash</span></figcaption>
+</figure>
+
+<h3>Rut i Noemi</h3>
+<div class="p"><span class="n">5</span><p>Księga Rut opisuje kobietę, która nie chciała opuścić Noemi. „Gdzie ty pójdziesz, tam i ja pójdę” <span class="ref">(Rt 1:16)</span>. Słowa te czyta się dziś na tysiącach ślubów. Rzadko kto wspomina, że wypowiedziała je kobieta do kobiety.</p></div>
+<div class="p"><span class="n">6</span><p>Warto zwrócić uwagę na jeszcze jeden szczegół. Pismo mówi, że Rut „przylgnęła” do Noemi <span class="ref">(Rt 1:14)</span>. W języku hebrajskim pada tu to samo słowo, które w Księdze Rodzaju opisuje mężczyznę przylegającego do żony <span class="ref">(Rdz 2:24)</span>. Natchniony pisarz mógł wybrać inne słowo. Nie wybrał.</p></div>
+
+<div class="box">
+  <p class="label">Czy wiesz?</p>
+  <p>Hebrajski czasownik <i>dawak</i>, oznaczający przylgnięcie, w Rodzaju 2:24 opisuje więź małżeńską, a w Rut 1:14 więź Rut z Noemi. Tradycyjni komentatorzy na ogół wolą tego nie zauważać.</p>
+</div>
+
+<div class="p"><span class="n">7</span><p>Czy to oznacza, że każda bliska przyjaźń jest czymś więcej? Oczywiście, że nie. Zachęcamy jednak, by nie zakładać z góry, że Pismo zawsze opisuje tylko to, co wygodne. Bereańczycy badali, „czyby się tak rzeczy miały” <span class="ref">(Dz 17:11)</span>. Badaj i ty.</p></div>
+<p class="q"><b>5-7.</b> (a) Jakie słowa Rut czyta się dziś na ślubach? (b) Co mówi nam hebrajskie słowo użyte w Rut 1:14?</p>
+
+<div class="review">
+  <p class="label">Jak byś odpowiedział?</p>
+  <ul>
+    <li>Dlaczego porównanie z 2 Samuela 1:26 jest tak wymowne?</li>
+    <li>Jak wyjaśnisz komuś znaczenie Rut 1:14?</li>
+  </ul>
+</div>
+<p class="song">Pieśń 51 · Gdzie ty pójdziesz</p>
+</article>
+
+<article id="nr10-mlodzi" class="feature">
+  <p class="label">Młodzi pytają</p>
+  <h2 class="title">„A kiedy ty?”</h2>
+  <p class="byline">Jak odpowiedzieć cioci na weselu</p>
+  <p class="lede">Znasz to. Orkiestra gra „Jesteś szalona”, kuzyn właśnie zdjął krawat, a ciocia Grażyna siada obok ciebie z kieliszkiem i pyta, kiedy wreszcie twoja kolej. Co możesz zrobić?</p>
+  <p><b>Zachowaj spokój.</b> „Łagodna odpowiedź uśmierza gniew” <span class="ref">(Prz 15:1)</span>. Ciocia prawdopodobnie nie chce cię zranić. Chce po prostu zatańczyć na kolejnym weselu.</p>
+  <p><b>Odwołaj się do Pisma.</b> Możesz przypomnieć, że w zmartwychwstaniu nikt nie będzie się żenił ani wychodził za mąż <span class="ref">(Mt 22:30)</span>. Ty po prostu wdrażasz ten model wcześniej. Jeśli ciocia jest szczególnie religijna, dodaj, że apostoł Paweł zalecał bezżennym, by pozostali tak jak on <span class="ref">(1 Kor 7:8)</span>.</p>
+  <p class="pull">„Ty po prostu wdrażasz ten model wcześniej”.</p>
+  <p><b>Zaproponuj taniec.</b> Nic tak nie zmienia tematu jak zaproszenie cioci do poloneza. Kaznodziei 3:4 mówi, że jest czas pląsania. To właśnie ten czas.</p>
+  <div class="box">
+    <p class="label">Spróbuj tego</p>
+    <p>Przygotuj wcześniej jedno zdanie, które możesz powiedzieć z uśmiechem. Na przykład: „Ciociu, kiedy będzie moja kolej, ty dowiesz się pierwsza. Zaraz po Panu Bogu”.</p>
+  </div>
+</article>
+<div class="issue-pager"><a href="#nr9">← Nr 9</a><a href="#nr11">Nr 11 →</a></div>
+</div>
+</section>
+
+<!-- ========== NR 9 ========== -->
+<section class="issue" id="nr9" hidden>
+<header class="cover">
+  <img class="bg" src="https://images.unsplash.com/photo-1542797488-3a16b9b11784?w=1800&q=80&auto=format&fit=crop" alt="Tęcza na tle błękitnego nieba i szarych chmur">
+  <div class="top">
+    <h1>Tęcza<br>Przymierza</h1>
+    <div class="tag"><span>Zwiastuje Królestwo Miłości</span><span>Rocznik 12 · Nr 9</span><span>Wrzesień 2026</span></div>
+  </div>
+  <div class="bottom">
+    <div class="kicker">W tym wydaniu</div>
+    <p class="headline">Co przeszkadza, abym został ochrzczony?</p>
+  </div>
+  <span class="credit">Fot. Dewang Gupta / Unsplash</span>
+</header>
+<div class="wrap">
+<nav class="toc" aria-label="Spis treści">
+  <p class="label">Spis treści</p>
+  <ol>
+    <li><a href="#nr9-studium"><span class="pg">2</span><span class="t">Eunuch, który pojechał swoją drogą, radując się</span><span class="d">Artykuł do studium 36. Do omawiania w tygodniu od 12 października.</span></a></li>
+    <li><a href="#nr9-pytania"><span class="pg">22</span><span class="t">Pytania czytelników</span><span class="d">Czy osoby aseksualne muszą komukolwiek tłumaczyć się ze swojego daru?</span></a></li>
+  </ol>
+</nav>
+
+<article id="nr9-studium">
+<div class="meta"><span>Artykuł do studium 36</span><span>Pieśń 88 · Oto woda</span></div>
+<h2 class="title">Eunuch, który pojechał swoją drogą, radując się</h2>
+<p class="theme">„Oto woda; cóż mi przeszkadza, abym nie był ochrzczony?” <b>(Dz 8:36)</b>.</p>
+<div class="learn">
+  <p class="label">Czego się nauczysz?</p>
+  <p>Jak Bóg traktuje ludzi, którzy nie mieszczą się w ludzkich kategoriach płci i rodziny, i dlaczego Filip nie zadawał zbędnych pytań.</p>
+</div>
+
+<div class="p"><span class="n">1</span><p>Prawo Mojżeszowe zamykało eunuchom drogę do zgromadzenia <span class="ref">(Pwt 23:1)</span>. Byli ludźmi, których ciało nie pasowało do oczekiwań. Przez wieki stali za progiem.</p></div>
+<div class="p"><span class="n">2</span><p>Jednak już prorok Izajasz zapowiedział zmianę. Bóg obiecał eunuchom miejsce w swoim domu i imię „lepsze niż synowie i córki” <span class="ref">(Iz 56:3-5)</span>. Zwróćmy uwagę, że obietnica nie wymagała od nich, by stali się kimś innym. Dotyczyła ich takich, jakimi byli.</p></div>
+<p class="q"><b>1, 2.</b> (a) Jak Prawo traktowało eunuchów? (b) Co Bóg obiecał im przez Izajasza?</p>
+
+<h3>Spotkanie na pustynnej drodze</h3>
+<div class="p"><span class="n">3</span><p>Dzieje Apostolskie opisują dworzanina królowej etiopskiej, eunucha, który wracał z Jerozolimy i czytał Izajasza <span class="ref">(Dz 8:27, 28)</span>. Prawdopodobnie nie wpuszczono go dalej niż na dziedziniec. Mimo to czytał. Duch polecił Filipowi podejść do jego wozu.</p></div>
+<div class="p"><span class="n">4</span><p>Gdy dotarli do wody, eunuch zapytał, co przeszkadza, by został ochrzczony. Filip mógł wymienić wiele przeszkód. Mógł zwołać naradę starszych, zażądać zaświadczeń albo odesłać go do Pwt 23:1. Nie zrobił żadnej z tych rzeczy. Zszedł z nim do wody i ochrzcił go <span class="ref">(Dz 8:38)</span>.</p></div>
+<div class="p"><span class="n">5</span><p>Pismo dodaje, że eunuch „jechał swoją drogą, radując się” <span class="ref">(Dz 8:39)</span>. To pierwsza osoba spoza Izraela, której chrzest Dzieje opisują tak szczegółowo. Bóg zaczął otwierać drzwi od kogoś, kogo ludzie trzymali za progiem.</p></div>
+<p class="q"><b>3-5.</b> (a) Jakie przeszkody mógł wymienić Filip? (b) Dlaczego chrzest eunucha ma tak duże znaczenie?</p>
+
+<figure class="photo">
+  <div class="frame"><img loading="lazy" src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=1400&q=80&auto=format&fit=crop" alt="Kobieta czytająca książkę"></div>
+  <figcaption>Eunuch czytał Izajasza, choć nikt go do tego nie zachęcał. Co powstrzymuje ciebie? <span class="cr">Fot. Sincerely Media / Unsplash</span></figcaption>
+</figure>
+
+<h3>„Kto może pojąć, niech pojmie”</h3>
+<div class="p"><span class="n">6</span><p>Jezus mówił o trzech rodzajach eunuchów: tych, którzy tacy się urodzili, tych, których uczynili takimi ludzie, i tych, którzy wybrali taką drogę dla Królestwa <span class="ref">(Mt 19:12)</span>. Uznał więc, że istnieją ludzie, którzy od narodzin nie pasują do schematu. Nie nazwał tego wadą. Nazwał to faktem.</p></div>
+<div class="p"><span class="n">7</span><p>Apostoł Paweł poszedł jeszcze dalej. Napisał, że w Chrystusie nie ma już mężczyzny ani kobiety <span class="ref">(Ga 3:28)</span>. Ci, którzy dziś nie odnajdują się w podziale na dwie płcie, mogą znaleźć w tym wersecie pocieszenie. Ci, którzy się w nim odnajdują, mogą znaleźć w nim lekcję pokory.</p></div>
+
+<div class="box">
+  <p class="label">Czy wiesz?</p>
+  <p>Grecki wyraz <i>eunuchos</i> nie zawsze oznaczał osobę wykastrowaną. W starożytności określano nim też ludzi, którzy po prostu nie zakładali rodziny ani nie mieli dzieci. Jezus w Mateusza 19:12 używa go w szerszym znaczeniu.</p>
+</div>
+<p class="q"><b>6, 7.</b> (a) O jakich trzech rodzajach eunuchów mówił Jezus? (b) Jakie pocieszenie płynie z Galatów 3:28?</p>
+
+<div class="review">
+  <p class="label">Jak byś odpowiedział?</p>
+  <ul>
+    <li>Czego uczy nas postawa Filipa wobec eunucha?</li>
+    <li>Jak Mateusza 19:12 pomaga nam okazywać szacunek osobom, które nie pasują do schematu?</li>
+  </ul>
+</div>
+<p class="song">Pieśń 88 · Oto woda</p>
+</article>
+
+<article id="nr9-pytania" class="feature qa">
+  <p class="label">Pytania czytelników</p>
+  <p class="qq">Czy osoby aseksualne muszą komukolwiek tłumaczyć się ze swojego daru?</p>
+  <p>Nie. Apostoł Paweł życzył sobie, by wszyscy byli tacy jak on, ale dodał, że każdy ma własny dar od Boga, „jeden tak, a drugi owak” <span class="ref">(1 Kor 7:7)</span>. Brak zainteresowania życiem seksualnym jest w tym ujęciu darem, a nie problemem do rozwiązania.</p>
+  <p>Warto zauważyć, że ani Jezus, ani Paweł, ani Jeremiasz, któremu Bóg polecił nie zakładać rodziny <span class="ref">(Jr 16:2)</span>, nie tłumaczyli się nikomu ze swojego stanu. Dlaczego ktokolwiek miałby tego wymagać od współczesnych braci i sióstr?</p>
+  <p>Jeśli więc w zborze ktoś zapyta osobę aseksualną, czy „jeszcze nie znalazła tej jedynej osoby”, starsi mogą łagodnie przypomnieć mu Rzymian 14:4: „Ktoś ty jest, który sądzisz cudzego sługę?”.</p>
+</article>
+<div class="issue-pager"><a href="#nr8">← Nr 8</a><a href="#nr10">Nr 10 →</a></div>
+</div>
+</section>
+
+<!-- ========== NR 8 ========== -->
+<section class="issue" id="nr8" hidden>
+<header class="cover">
+  <img class="bg" src="https://images.unsplash.com/photo-1628660961125-e8d12c2290c2?w=1800&q=80&auto=format&fit=crop" alt="Tęcza pod zachmurzonym niebem">
+  <div class="top">
+    <h1>Tęcza<br>Przymierza</h1>
+    <div class="tag"><span>Zwiastuje Królestwo Miłości</span><span>Rocznik 12 · Nr 8</span><span>Sierpień 2026</span></div>
+  </div>
+  <div class="bottom">
+    <div class="kicker">W tym wydaniu</div>
+    <p class="headline">Sodoma: czego nie powie ci kaznodzieja</p>
+  </div>
+  <span class="credit">Fot. Taeshin T / Unsplash</span>
+</header>
+<div class="wrap">
+<nav class="toc" aria-label="Spis treści">
+  <p class="label">Spis treści</p>
+  <ol>
+    <li><a href="#nr8-studium"><span class="pg">2</span><span class="t">Prawdziwy grzech Sodomy</span><span class="d">Artykuł do studium 32. Do omawiania w tygodniu od 14 września.</span></a></li>
+    <li><a href="#nr8-zbory"><span class="pg">24</span><span class="t">Z życia zborów: Wrocław-Nadodrze</span><span class="d">Nowa Sala Spektrum i 47 chrztów w Odrze.</span></a></li>
+  </ol>
+</nav>
+
+<article id="nr8-studium">
+<div class="meta"><span>Artykuł do studium 32</span><span>Pieśń 14 · Otwarte drzwi</span></div>
+<h2 class="title">Prawdziwy grzech Sodomy</h2>
+<p class="theme">„Toć ta była nieprawość Sodomy: pycha, sytość chleba i obfitość próżnowania” <b>(Ez 16:49)</b>.</p>
+<div class="learn">
+  <p class="label">Czego się nauczysz?</p>
+  <p>Co Pismo samo mówi o grzechu Sodomy i dlaczego ta historia powinna niepokoić raczej deweloperów niż parady.</p>
+</div>
+
+<div class="p"><span class="n">1</span><p>Niewiele biblijnych miast ma tak złą sławę jak Sodoma. Jej nazwa weszła do języka jako określenie, którego nie będziemy tu powtarzać. Ale czy Biblia rzeczywiście mówi to, co wielu ludziom wydaje się, że mówi? Sprawdźmy.</p></div>
+<div class="p"><span class="n">2</span><p>Księga Rodzaju opisuje, jak mieszkańcy miasta otoczyli dom Lota i zażądali wydania jego gości <span class="ref">(Rdz 19:4, 5)</span>. Chcieli dokonać zbiorowej przemocy na przybyszach, którzy szukali schronienia. Nie była to historia miłości. Była to historia napaści.</p></div>
+<p class="q"><b>1, 2.</b> Co według Rodzaju 19 zrobili mieszkańcy Sodomy?</p>
+
+<h3>Biblia wyjaśnia Biblię</h3>
+<div class="p"><span class="n">3</span><p>Nie musimy zgadywać, na czym polegał grzech Sodomy. Ezechiel mówi to wprost: pycha, przesyt chleba, beztroska i to, że miasto nie wspierało ubogich i potrzebujących <span class="ref">(Ez 16:49, 50)</span>. Ani słowa o miłości dwóch mężczyzn.</p></div>
+<div class="p"><span class="n">4</span><p>Jezus również wspomniał Sodomę. Zrobił to, gdy mówił o miastach, które nie przyjmą jego uczniów. Takim miastom ma być gorzej niż Sodomie <span class="ref">(Mt 10:14, 15)</span>. Jezus łączył więc Sodomę z odrzuceniem i brakiem gościnności. Gdyby chodziło mu o coś innego, miał doskonałą okazję, by to powiedzieć.</p></div>
+<div class="p"><span class="n">5</span><p>List Judy wspomina, że Sodoma poszła za „obcym ciałem” <span class="ref">(Jud 7)</span>. Kontekst listu dotyczy aniołów, którzy porzucili swoje mieszkanie <span class="ref">(Jud 6)</span>. Goście Lota byli aniołami. Jeżeli więc nie planujesz uwodzić aniołów, ten werset cię nie dotyczy.</p></div>
+<p class="q"><b>3-5.</b> (a) Jak Ezechiel opisuje grzech Sodomy? (b) W jakim kontekście Jezus wspomniał to miasto?</p>
+
+<figure class="photo wide">
+  <div class="frame"><img loading="lazy" src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=1400&q=80&auto=format&fit=crop" alt="Strona Biblii na szarym betonie"></div>
+  <figcaption>Pismo często samo wyjaśnia trudne fragmenty. Wystarczy otworzyć je w kilku miejscach. <span class="cr">Fot. Aaron Burden / Unsplash</span></figcaption>
+</figure>
+
+<h3>Lekcja dla nas</h3>
+<div class="p"><span class="n">6</span><p>Co możemy wynieść z tej historii? Lot przyjął obcych pod swój dach i chronił ich. Mieszkańcy Sodomy chcieli ich skrzywdzić. Pytanie, które stawia ta historia, nie dotyczy więc tego, kogo kochasz. Dotyczy tego, jak traktujesz przybysza w swoim mieście.</p></div>
+<div class="p"><span class="n">7</span><p>Hebrajczyków 13:2 przypomina, że niektórzy, okazując gościnność, ugościli aniołów, nie wiedząc o tym. Następnym razem, gdy ktoś użyje słowa „Sodoma” jako obelgi, możesz łagodnie zapytać, kiedy ostatnio zaprosił obcego na obiad.</p></div>
+
+<div class="box">
+  <p class="label">Czy wiesz?</p>
+  <p>Ile przepisów z Kodeksu Świętości łamie przeciętny krytyk przed śniadaniem?</p>
+  <ul>
+    <li>przycina brzegi brody (Kpł 19:27)</li>
+    <li>ubiera koszulę z mieszanki bawełny i poliestru (Kpł 19:19)</li>
+    <li>je jajecznicę na boczku (Kpł 11:7)</li>
+    <li>nie zakrywa tatuażu z czasów studiów (Kpł 19:28)</li>
+  </ul>
+  <p>Wynik: cztery, zanim wypije kawę.</p>
+</div>
+<p class="q"><b>6, 7.</b> Jakie pytanie stawia przed nami historia Sodomy?</p>
+
+<div class="review">
+  <p class="label">Jak byś odpowiedział?</p>
+  <ul>
+    <li>Jak Biblia sama wyjaśnia grzech Sodomy?</li>
+    <li>Co mówi o nim Jezus w Mateusza 10:15?</li>
+  </ul>
+</div>
+<p class="song">Pieśń 14 · Otwarte drzwi</p>
+</article>
+
+<article id="nr8-zbory" class="feature">
+  <p class="label">Z życia zborów</p>
+  <h2 class="title">Wrocław-Nadodrze: Sala Spektrum otwarta</h2>
+  <p class="byline">Relacja z oddania do użytku</p>
+  <p class="lede">W sobotę 18 lipca zbór Wrocław-Nadodrze oddał do użytku nową Salę Spektrum przy ulicy, której nazwy nie podajemy ze względu na sąsiadów. Prace trwały czternaście miesięcy i wykonali je wyłącznie ochotnicy. Brat Tomasz, koordynator budowy, wspomina, że największym wyzwaniem był wybór koloru ścian. „Głosowaliśmy jedenaście razy. Ostatecznie pomalowaliśmy każdą ścianę na inny kolor, zgodnie z Rodzaju 9:13”.</p>
+  <p>Po przemówieniu okolicznościowym 47 osób usymbolizowało swoje oddanie przez chrzest w Odrze. Inspiracją był etiopski eunuch, który na widok wody zapytał, co mu przeszkadza <span class="ref">(Dz 8:36)</span>. Według relacji obecnych przeszkadzała jedynie temperatura wody.</p>
+  <p class="pull">„Głosowaliśmy jedenaście razy. Ostatecznie pomalowaliśmy każdą ścianę na inny kolor”.</p>
+  <p>Wśród ochrzczonych znalazło się troje braci heteroseksualnych. Starsi zboru podkreślają, że przyjęto ich z otwartymi ramionami. „Pomagali przy stropie i nie zadawali pytań. Czego chcieć więcej?” — mówi brat Marek. Zbór zaprasza na zebrania w czwartki i niedziele. Parking od podwórza.</p>
+</article>
+<div class="issue-pager"><a href="#archiwum">← Archiwum</a><a href="#nr9">Nr 9 →</a></div>
+</div>
+</section>
+
+<!-- ========== ARCHIWUM ========== -->
+<section class="issue" id="archiwum" hidden>
+<div class="wrap">
+  <div class="arch-head">
+    <p class="label">Archiwum</p>
+    <h2 class="title">Wszystkie wydania</h2>
+    <p class="theme">„Tęcza Przymierza” ukazuje się nieprzerwanie od 2015 roku. Poniżej wydania z bieżącego rocznika.</p>
+  </div>
+
+  <h3>Rocznik 12 · 2026</h3>
+  <div class="shelf">
+    <a class="mini soon" aria-disabled="true"><span class="no">Nr 12 · Grudzień</span><span class="mt">Wkrótce: Trzech mężczyzn, jedna gwiazda, długa podróż</span></a>
+    <a class="mini photo-c" href="#nr11"><img src="https://images.unsplash.com/photo-1548475390-f6908921aaf8?w=600&q=70&auto=format&fit=crop" alt=""><span class="no">Nr 11 · Listopad</span><span class="mt">Kto umieścił tęczę na niebie i dlaczego?</span></a>
+    <a class="mini photo-c" href="#nr10"><img src="https://images.unsplash.com/photo-1593362831502-5c3ad1c05f57?w=600&q=70&auto=format&fit=crop" alt=""><span class="no">Nr 10 · Październik</span><span class="mt">Czy Dawid i Jonatan byli tylko przyjaciółmi?</span></a>
+    <a class="mini photo-c" href="#nr9"><img src="https://images.unsplash.com/photo-1542797488-3a16b9b11784?w=600&q=70&auto=format&fit=crop" alt=""><span class="no">Nr 9 · Wrzesień</span><span class="mt">Co przeszkadza, abym został ochrzczony?</span></a>
+    <a class="mini photo-c" href="#nr8"><img src="https://images.unsplash.com/photo-1628660961125-e8d12c2290c2?w=600&q=70&auto=format&fit=crop" alt=""><span class="no">Nr 8 · Sierpień</span><span class="mt">Sodoma: czego nie powie ci kaznodzieja</span></a>
+    <a class="mini c6" aria-disabled="true"><span class="no">Nr 7 · Lipiec</span><span class="mt">Wakacje nad wodą jak etiopski eunuch</span></a>
+    <a class="mini c5" aria-disabled="true"><span class="no">Nr 6 · Czerwiec</span><span class="mt">Kto pierwszy podniósł tęczę? Odpowiedź z Rodzaju 9</span></a>
+    <a class="mini c4" aria-disabled="true"><span class="no">Nr 5 · Maj</span><span class="mt">Dwie mamy w zborze. Co mówi Pismo?</span></a>
+    <a class="mini c3" aria-disabled="true"><span class="no">Nr 4 · Kwiecień</span><span class="mt">Pusty grób, pełne spektrum</span></a>
+    <a class="mini c2" aria-disabled="true"><span class="no">Nr 3 · Marzec</span><span class="mt">Czy Paweł znał pojęcie orientacji?</span></a>
+    <a class="mini c1" aria-disabled="true"><span class="no">Nr 2 · Luty</span><span class="mt">Pieśń nad Pieśniami. Dla kogo była pisana?</span></a>
+    <a class="mini c6" aria-disabled="true"><span class="no">Nr 1 · Styczeń</span><span class="mt">Postanowienia noworoczne w świetle Kapłańskiej 19:19</span></a>
+  </div>
+  <p class="note">Wydania 1-7 są dostępne w wersji drukowanej w Salach Spektrum. Zapytaj sługę literatury.</p>
+
+  <h3>Starsze roczniki</h3>
+  <ul class="years">
+    <li><b>2025</b> Rocznik 11 · „Ezechiel 16:49 w praktyce”</li>
+    <li><b>2024</b> Rocznik 10 · „Eunuchowie w historii zboru”</li>
+    <li><b>2023</b> Rocznik 9 · „Kapłańska bez wybiórczości”</li>
+    <li><b>2022</b> Rocznik 8 · „Rut, Noemi i hebrajskie <i>dawak</i>”</li>
+    <li><b>2021</b> Rocznik 7 · „Kiedy Piotr zmienił zdanie”</li>
+    <li><b>2015-2020</b> Roczniki 1-6 · wydania archiwalne</li>
+  </ul>
+</div>
+</section>
+<div class="wrap foot"><footer>
   <p>Satyra. Gay Church i „Tęcza Przymierza” nie mają żadnego związku z wydawcami czasopisma „Strażnica” ani ze Świadkami Jehowy. Cytaty biblijne za Biblią Gdańską (1632), miejscami w uproszczeniu.</p>
   <p>Zdjęcia pochodzą z serwisu Unsplash i są używane na licencji Unsplash. Osoby widoczne na zdjęciach są przypadkowymi modelami i nie mają żadnego związku z Gay Church ani z treścią tego wydania.</p>
   <ul>
-    <li>Okładka: Coralie Meurice</li>
-    <li>Biblia: Aaron Burden</li>
-    <li>Tęcza nad jeziorem: David Brooke Martin</li>
+    <li>Okładki: David Brooke Martin, Stainless Images, Dewang Gupta, Taeshin T</li>
+    <li>Biblia i książki: Aaron Burden</li>
+    <li>Podwójna tęcza: Coralie Meurice</li>
+    <li>Kobieta z książką: Sincerely Media</li>
     <li>Osoba z książką: Andrik Langfield</li>
     <li>Para: Brooke Balentine</li>
     <li>Kolacja: Karl Hedin</li>
@@ -341,5 +670,22 @@ a{color:var(--accent)}
   </ul>
 </footer>
 </div>
+<script>
+(function(){
+  var sections=[].slice.call(document.querySelectorAll('section.issue'));
+  var links=[].slice.call(document.querySelectorAll('.bar nav a'));
+  function route(){
+    var h=(location.hash||'#nr11').slice(1);
+    var id=h.split('-')[0];
+    var target=document.getElementById(id);
+    if(!target||!target.classList.contains('issue')){id='nr11';target=document.getElementById('nr11');}
+    sections.forEach(function(s){s.hidden=(s!==target);});
+    links.forEach(function(a){ if(a.getAttribute('href')==='#'+id){a.setAttribute('aria-current','page');} else {a.removeAttribute('aria-current');} });
+    var el=h.indexOf('-')>0?document.getElementById(h):null;
+    if(el){el.scrollIntoView();} else {window.scrollTo(0,0);}
+  }
+  window.addEventListener('hashchange',route); route();
+})();
+</script>
 </body>
 </html>
