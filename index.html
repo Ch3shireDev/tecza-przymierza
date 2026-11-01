@@ -1,24 +1,27 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Tęcza Przymierza</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tęcza Przymierza · Listopad 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..600&display=swap">
 <style>
-/* Layout: one study-article column; paragraph numbers in a hanging margin; boxes set off by tint, rainbow used once at the masthead. */
+/* Layout: magazine issue. Full-bleed photo cover, contents, then one reading column with photos breaking the measure. */
 :root{
   --paper:#fbfafd; --ink:#1f1d33; --muted:#5d5a73; --rule:#dcd8e8;
-  --accent:#4b3a9e; --box:#f1eef9; --boxrule:#cfc7ea;
+  --accent:#4b3a9e; --box:#f1eef9; --boxrule:#cfc7ea; --ph:#e4e0f0;
   --display:"Archivo", "Helvetica Neue", Arial, sans-serif;
   --body:"Literata", Georgia, "Times New Roman", serif;
+  color-scheme:light;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+@media (prefers-color-scheme: dark){:root{
   --paper:#15131f; --ink:#ebe8f5; --muted:#a8a3bf; --rule:#34304a;
-  --accent:#b3a6f2; --box:#1f1c2e; --boxrule:#3d3760; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --paper:#15131f; --ink:#ebe8f5; --muted:#a8a3bf; --rule:#34304a;
-  --accent:#b3a6f2; --box:#1f1c2e; --boxrule:#3d3760; color-scheme:dark}
-
+  --accent:#b3a6f2; --box:#1f1c2e; --boxrule:#3d3760; --ph:#26223a; color-scheme:dark}}
+*{box-sizing:border-box}
+html,body{margin:0}
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.62}
+img{max-width:100%}
 .wrap{max-width:720px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 56px}
 
 .spectrum{display:flex;height:10px}
@@ -27,11 +30,31 @@ body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:
 .spectrum i:nth-child(3){background:#f2cf3c}.spectrum i:nth-child(4){background:#3fa35a}
 .spectrum i:nth-child(5){background:#3672c9}.spectrum i:nth-child(6){background:#7a4bb8}
 
-header.mast{padding-block:28px 22px;border-bottom:2px solid var(--ink);display:grid;gap:6px}
-.mast h1{font-family:var(--display);font-stretch:118%;font-weight:800;font-size:clamp(2.1rem,7vw,3.4rem);letter-spacing:.04em;line-height:1;margin:0;text-transform:uppercase}
-.mast .tag{font-family:var(--display);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 14px}
+/* cover */
+.cover{position:relative;min-height:min(92vh,760px);display:flex;flex-direction:column;justify-content:space-between;color:#fff;background:#3a3550 center/cover no-repeat;overflow:hidden}
+.cover img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,40,.55) 0%,rgba(20,16,40,0) 35%,rgba(20,16,40,0) 55%,rgba(20,16,40,.78) 100%)}
+.cover > *{position:relative;z-index:1}
+.cover .top,.cover .bottom{max-width:960px;width:100%;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.cover .top{padding-block:26px 0}
+.cover h1{font-family:var(--display);font-stretch:118%;font-weight:800;font-size:clamp(2.6rem,10vw,5.4rem);letter-spacing:.03em;line-height:.95;margin:0;text-transform:uppercase}
+.cover .tag{font-family:var(--display);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:10px;opacity:.95}
+.cover .bottom{padding-block:0 34px}
+.cover .kicker{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;opacity:.9}
+.cover .headline{font-family:var(--display);font-weight:700;font-stretch:96%;font-size:clamp(1.7rem,5.4vw,3rem);line-height:1.08;margin:8px 0 0;max-width:16ch;text-wrap:balance}
+.cover .credit{position:absolute;right:max(12px, env(safe-area-inset-right, 0px));bottom:8px;z-index:1;font-family:var(--display);font-size:.68rem;opacity:.7}
 
-.meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;margin-top:34px;font-family:var(--display);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+/* contents */
+.toc{padding-block:34px 10px;border-bottom:2px solid var(--ink)}
+.toc .label{margin-bottom:14px}
+.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.toc li a{display:grid;grid-template-columns:2.4rem minmax(0,1fr);gap:4px 10px;padding:12px 0;border-top:1px solid var(--rule);color:inherit;text-decoration:none}
+.toc li a:hover .t,.toc li a:focus-visible .t{color:var(--accent)}
+.toc .pg{font-family:var(--display);font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums}
+.toc .t{font-family:var(--display);font-weight:700;font-size:1.05rem;line-height:1.25}
+.toc .d{grid-column:2;font-size:.92rem;color:var(--muted);line-height:1.45}
+
+.meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;margin-top:44px;font-family:var(--display);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
 h2.title{font-family:var(--display);font-stretch:96%;font-weight:700;font-size:clamp(1.8rem,5.4vw,2.6rem);line-height:1.12;margin:14px 0 18px;text-wrap:balance}
 .theme{font-style:italic;font-size:1.05rem;color:var(--muted);margin:0 0 26px}
 .theme b{font-style:normal;color:var(--ink);font-weight:600}
@@ -58,9 +81,15 @@ h3{font-family:var(--display);font-weight:800;font-size:.95rem;letter-spacing:.1
 
 figure{margin:30px 0}
 figure svg{width:100%;height:auto;display:block;background:var(--box);border:1px solid var(--boxrule)}
+.photo .frame{background:var(--ph);aspect-ratio:3/2;overflow:hidden}
+.photo .frame.tall{aspect-ratio:4/5}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo.wide{margin-left:calc(-1 * min(8vw, 60px));margin-right:calc(-1 * min(8vw, 60px))}
 figcaption{font-family:var(--display);font-size:.88rem;line-height:1.45;color:var(--muted);margin-top:8px}
 figcaption b{color:var(--ink);letter-spacing:.08em;text-transform:uppercase;font-size:.78rem}
+figcaption .cr{display:block;font-size:.72rem;opacity:.8;margin-top:2px}
 .ink{fill:var(--ink)} .soft{fill:var(--muted)} .ground{fill:var(--rule)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 
 .review{border:2px solid var(--ink);padding:18px 20px;margin-top:40px}
 .review ul{margin:8px 0 0;padding-left:1.2rem;display:grid;gap:6px}
@@ -68,23 +97,58 @@ figcaption b{color:var(--ink);letter-spacing:.08em;text-transform:uppercase;font
 
 .gloss{margin-top:36px;padding-top:14px;border-top:1px solid var(--rule);font-size:.9rem;color:var(--muted)}
 .gloss p{margin:0 0 8px}.gloss b{color:var(--ink)}
-footer{margin-top:30px;font-family:var(--display);font-size:.78rem;color:var(--muted);line-height:1.5}
 
-@media (max-width:480px){
+/* life story */
+.feature{margin-top:64px;padding-top:28px;border-top:6px double var(--ink)}
+.feature .byline{font-family:var(--display);font-size:.9rem;color:var(--muted);margin:0 0 22px}
+.feature .lede::first-letter{font-family:var(--display);font-weight:800;float:left;font-size:3.6rem;line-height:.82;padding:6px 8px 0 0;color:var(--accent)}
+.feature p{margin:0 0 14px}
+.pull{font-family:var(--display);font-weight:700;font-stretch:92%;font-size:1.4rem;line-height:1.25;color:var(--accent);border-top:2px solid var(--accent);border-bottom:2px solid var(--accent);padding:14px 0;margin:26px 0;text-wrap:balance}
+
+.qa .qq{font-family:var(--display);font-weight:700;font-size:1.25rem;line-height:1.3;margin:0 0 14px}
+
+footer{margin-top:44px;font-family:var(--display);font-size:.78rem;color:var(--muted);line-height:1.55}
+footer ul{margin:6px 0 0;padding-left:1.1rem}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+@media (max-width:520px){
   body{font-size:16px}
   .q{margin-left:0}
   .dialog p{grid-template-columns:1fr;gap:0}
+  .photo.wide{margin-left:calc(-1 * max(16px, env(safe-area-inset-left, 0px)));margin-right:calc(-1 * max(16px, env(safe-area-inset-right, 0px)))}
+  .pair{grid-template-columns:1fr}
 }
 </style>
+</head>
+<body>
 
 <div class="spectrum" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-<div class="wrap">
-
-<header class="mast">
-  <h1>Tęcza Przymierza</h1>
-  <div class="tag"><span>Zwiastuje Królestwo Miłości</span><span>Wydanie do studium</span><span>Listopad 2026</span><span>Gay Church</span></div>
+<header class="cover">
+  <img class="bg" src="https://images.unsplash.com/photo-1718138990279-97c54c2dd00e?w=1800&q=80&auto=format&fit=crop" alt="Podwójna tęcza nad zieloną łąką">
+  <div class="top">
+    <h1>Tęcza<br>Przymierza</h1>
+    <div class="tag"><span>Zwiastuje Królestwo Miłości</span><span>Wydanie do studium</span><span>Listopad 2026</span></div>
+  </div>
+  <div class="bottom">
+    <div class="kicker">W tym wydaniu</div>
+    <p class="headline">Kto umieścił tęczę na niebie i dlaczego?</p>
+  </div>
+  <span class="credit">Fot. Coralie Meurice / Unsplash</span>
 </header>
 
+<div class="wrap">
+
+<nav class="toc" aria-label="Spis treści">
+  <p class="label">Spis treści</p>
+  <ol>
+    <li><a href="#studium"><span class="pg">2</span><span class="t">Tęcza nie jest dekoracją. Jest przymierzem</span><span class="d">Artykuł do studium 44. Do omawiania na zebraniach w tygodniu od 7 grudnia.</span></a></li>
+    <li><a href="#zyciorys"><span class="pg">18</span><span class="t">Życiorys: Przestałem mrużyć oczy</span><span class="d">Brat Krzysztof przez dwadzieścia lat czytał jeden werset. Potem przeczytał następny rozdział.</span></a></li>
+    <li><a href="#pytania"><span class="pg">26</span><span class="t">Pytania czytelników</span><span class="d">Czy brat heteroseksualny może usługiwać jako starszy?</span></a></li>
+  </ol>
+</nav>
+
+<article id="studium">
 <div class="meta"><span>Artykuł do studium 44</span><span>Pieśń 69 · Dumni pod łukiem</span></div>
 <h2 class="title">Tęcza nie jest dekoracją. Jest przymierzem</h2>
 <p class="theme">„Łuk mój położę na obłoku, i będzie na znak przymierza” <b>(Rdz 9:13)</b>.</p>
@@ -98,11 +162,21 @@ footer{margin-top:30px;font-family:var(--display);font-size:.78rem;color:var(--m
 <div class="p"><span class="n">2</span><p>W tym artykule rozważymy trzy pytania. Dlaczego możemy być pewni, że droga LGBT+ jest zgodna z zamierzeniem Stwórcy? Jak odpowiadać tym, którzy wyrywają wersety z kontekstu? I jak okazywać miłość tym, którzy wybrali drogę heteroseksualną?</p></div>
 <p class="q"><b>1, 2.</b> (a) Co Bóg ustanowił jako znak przymierza? (b) Jakie pytania rozważymy?</p>
 
+<figure class="photo wide">
+  <div class="frame"><img loading="lazy" src="https://images.unsplash.com/photo-1469228252629-cbe7cb7db2c8?w=1400&q=80&auto=format&fit=crop" alt="Otwarta Biblia na szarym blacie"></div>
+  <figcaption>Odpowiedzi nie trzeba szukać daleko. Wystarczy przeczytać więcej niż jeden werset. <span class="cr">Fot. Aaron Burden / Unsplash</span></figcaption>
+</figure>
+
 <h3>Stworzeni tacy, jacy jesteśmy</h3>
 <div class="p"><span class="n">3</span><p>Jezus nauczał, że niektórzy ludzie „z żywota matki tak się urodzili” i nie pasują do schematu małżeństwa nastawionego na potomstwo <span class="ref">(Mt 19:12)</span>. Zwróćmy uwagę, że nie nazwał ich pomyłką. Dodał tylko: „Kto może pojąć, niech pojmie”. Niestety, wielu do dziś nie pojęło.</p></div>
 <div class="p"><span class="n">4</span><p>Prorok Izajasz zapisał Bożą obietnicę dla eunuchów. Otrzymają oni imię „lepsze niż synowie i córki” <span class="ref">(Iz 56:4, 5)</span>. Nie „równie dobre”. Lepsze. W Dziejach Apostolskich etiopski eunuch, wykluczony dotąd z kultu, pyta Filipa, co przeszkadza, by został ochrzczony. Filip nie zwołuje komisji. Chrzci go od razu <span class="ref">(Dz 8:36-38)</span>.</p></div>
 <div class="p"><span class="n">5</span><p>Pierwszą rzeczą, którą Bóg określił jako „niedobrą”, nie była żadna konfiguracja płci, lecz samotność <span class="ref">(Rdz 2:18)</span>. Kto nakłada na innych przymusową samotność, przywraca dokładnie ten stan, który Stwórca uznał za niewłaściwy. Czy chcielibyśmy znaleźć się w takim położeniu?</p></div>
 <p class="q"><b>3-5.</b> (a) Co Jezus i Izajasz powiedzieli o osobach, które nie wpisują się w schemat reprodukcyjny? (b) Czego uczy nas przykład Filipa?</p>
+
+<figure class="photo wide">
+  <div class="frame"><img loading="lazy" src="https://images.unsplash.com/photo-1548475390-f6908921aaf8?w=1400&q=80&auto=format&fit=crop" alt="Tęcza nad jeziorem pod ciemnymi chmurami"></div>
+  <figcaption>Nawet po burzy Bóg przypomina o swoim przymierzu. Czy ty również je pamiętasz? <span class="cr">Fot. David Brooke Martin / Unsplash</span></figcaption>
+</figure>
 
 <h3>Zadanie wykonane</h3>
 <div class="p"><span class="n">6</span><p>Bóg polecił ludziom: „Rozradzajcie się i rozmnażajcie się, i napełniajcie ziemię” <span class="ref">(Rdz 1:28)</span>. Dziś na ziemi żyje ponad osiem miliardów ludzi. Wierny sługa wie, kiedy zadanie zostało wykonane. Może wtedy powiedzieć za Jezusem: „Uczyniliśmy, cośmy powinni byli uczynić” <span class="ref">(Łk 17:10)</span>. Dalsze napełnianie już pełnej ziemi to nie gorliwość, lecz brak rozeznania.</p></div>
@@ -142,6 +216,11 @@ footer{margin-top:30px;font-family:var(--display);font-size:.78rem;color:var(--m
 <div class="p"><span class="n">9</span><p>Często cytuje się Kapłańską 18:22. Przeczytajmy ten werset dokładnie. Zakazuje on obcowania z mężczyzną „jak z kobietą”. Zakaz dotyczy więc naśladowania, a nie samej relacji. Zauważmy też, że ten sam zbiór praw zabrania noszenia szat utkanych z dwóch rodzajów przędzy <span class="ref">(Kpł 19:19)</span> oraz jedzenia stworzeń wodnych bez płetw i łusek <span class="ref">(Kpł 11:10)</span>. Zanim zacytujesz Kapłańską, sprawdź metkę na koszuli i zawartość talerza.</p></div>
 <div class="p"><span class="n">10</span><p>Apostoł Paweł w Liście do Rzymian opisuje ludzi, którzy porzucili Boga dla bałwanów i porzucili to, co było dla nich naturalne <span class="ref">(Rz 1:23-27)</span>. Dla osoby, która z łona matki jest homoseksualna, naturalny jest związek jednopłciowy. Warto też pamiętać, że według tego samego apostoła „sama natura” uczy, iż długie włosy przynoszą mężczyźnie ujmę <span class="ref">(1 Kor 11:14)</span>. Ilu krytyków przestrzega tej rady przed lustrem?</p></div>
 
+<figure class="photo">
+  <div class="frame"><img loading="lazy" src="https://images.unsplash.com/photo-1576506542790-51244b486a6b?w=1400&q=80&auto=format&fit=crop" alt="Osoba przy stole otwierająca książkę"></div>
+  <figcaption>Osobiste studium wymaga czasu. Przeczytanie jednego rozdziału dalej zajmuje około czterech minut. <span class="cr">Fot. Andrik Langfield / Unsplash</span></figcaption>
+</figure>
+
 <div class="box dialog">
   <p class="label">Jak byś odpowiedział?</p>
   <p><span class="who">Tomasz</span><span>Biblia wyraźnie mówi, że to obrzydliwość. Kapłańska 18:22.</span></p>
@@ -166,17 +245,32 @@ footer{margin-top:30px;font-family:var(--display);font-size:.78rem;color:var(--m
   <p>Na tym tle para dwóch sióstr z kredytem hipotecznym i kotem wygląda na model wyjątkowo zachowawczy.</p>
 </div>
 
+<figure class="photo">
+  <div class="frame tall"><img loading="lazy" src="https://images.unsplash.com/photo-1746399716252-cd681d95bde8?w=1400&q=80&auto=format&fit=crop" alt="Uśmiechnięta para obejmująca się"></div>
+  <figcaption>Radość płynie z wierności i wzajemnej troski, a nie z liczby nałożnic. <span class="cr">Fot. Brooke Balentine / Unsplash</span></figcaption>
+</figure>
+
 <div class="p"><span class="n">12</span><p>Apostoł Paweł napisał, że „dobrze jest mężczyźnie nie dotykać kobiety” <span class="ref">(1 Kor 7:1)</span>, a żonaty jest rozdarty, bo troszczy się, jak przypodobać się żonie <span class="ref">(1 Kor 7:32-34)</span>. Księga Objawienia opisuje 144 000 wybranych, którzy „nie skalali się z kobietami” <span class="ref">(Obj 14:4)</span>. Nie wyciągamy z tego pochopnych wniosków. Zachęcamy jednak do osobistego zastanowienia się nad tymi wersetami.</p></div>
 <p class="q"><b>11, 12.</b> (a) Dlaczego Mateusza 19:4-6 opisuje początek, a nie cel? (b) Czego uczą nas przykłady małżeństw z Pism Hebrajskich?</p>
 
 <h3>Okazuj miłość braciom heteroseksualnym</h3>
 <div class="p"><span class="n">13</span><p>Czy to oznacza, że osoby heteroseksualne nie mają miejsca w zborze? Wcale nie. Paweł, choć cenił inną drogę, zezwalał na małżeństwo, bo „lepiej jest wstąpić w związek małżeński, niż płonąć” <span class="ref">(1 Kor 7:9)</span>. Postępujemy podobnie. Jeśli ktoś ma taki wybór i dokonał go w sumieniu, nie potępiamy go. „Kto je, niech nie gardzi tym, który nie je” <span class="ref">(Rz 14:3)</span>.</p></div>
 <div class="p"><span class="n">14</span><p>Pamiętajmy, że bracia heteroseksualni dźwigają szczególne ciężary: pytania rodziny o wnuki, przyjęcia z ujawnianiem płci dziecka i rozmowy z teściami o świętach. Biblia zachęca, byśmy nosili nawzajem swoje ciężary <span class="ref">(Ga 6:2)</span>. Zapraszaj ich na zebrania. Nie pytaj, kiedy w końcu się określą. Pozwól im być sobą.</p></div>
+<figure class="photo wide">
+  <div class="frame"><img loading="lazy" src="https://images.unsplash.com/photo-1661006117166-6227bfc9c8b0?w=1400&q=80&auto=format&fit=crop" alt="Przyjaciele przy wspólnej kolacji w mieszkaniu"></div>
+  <figcaption>Wspólne posiłki to dobra okazja, by pokazać braciom heteroseksualnym, że mają w zborze swoje miejsce. I że ktoś inny pozmywa. <span class="cr">Fot. Karl Hedin / Unsplash</span></figcaption>
+</figure>
+
 <p class="q"><b>13, 14.</b> (a) Jak Paweł traktował tych, którzy wybierali małżeństwo? (b) Jak możemy pomagać braciom heteroseksualnym?</p>
 
 <h3>Trwaj pod łukiem</h3>
 <div class="p"><span class="n">15</span><p>Pierwsi chrześcijanie musieli zmienić zdanie w sprawie pogan. Piotr usłyszał: „Co Bóg oczyścił, ty nie miej za nieczyste” <span class="ref">(Dz 10:15)</span>. Paweł prosił Filemona, by przyjął zbiegłego niewolnika „jako brata umiłowanego” <span class="ref">(Flm 16)</span>. Pisma regulowały niewolnictwo, a mimo to dziś nikt nie broni go z Biblią w ręku. Niektórzy nazywają takie zmiany nowym światłem. My nazywamy je pełnym spektrum.</p></div>
 <div class="p"><span class="n">16</span><p>„Bóg jest miłością” <span class="ref">(1 Jana 4:8)</span>. Gdy następnym razem po deszczu zobaczysz tęczę, przypomnij sobie, kto ją tam umieścił. A jeśli ktoś zapyta cię, skąd bierzesz pewność, wskaż mu niebo.</p></div>
+<figure class="photo wide">
+  <div class="frame"><img loading="lazy" src="https://images.unsplash.com/photo-1573420666875-be4f2d7e7701?w=1400&q=80&auto=format&fit=crop" alt="Ludzie idący ulicą z tęczowymi flagami podczas parady"></div>
+  <figcaption>Pełne spektrum w praktyce. Zgromadzenia na otwartym powietrzu zawsze przyciągały tłumy (Mt 5:1). <span class="cr">Fot. Darren Nunis / Unsplash</span></figcaption>
+</figure>
+
 <p class="q"><b>15, 16.</b> (a) Jakie zmiany przeszedł wczesny zbór? (b) Co będziesz sobie przypominać, gdy zobaczysz tęczę?</p>
 
 <div class="review">
@@ -195,8 +289,57 @@ footer{margin-top:30px;font-family:var(--display);font-size:.78rem;color:var(--m
   <p><b>Brat heteroseksualny:</b> członek zboru, który w sumieniu dokonał innego wyboru. Okazujemy mu cierpliwość i nie ustajemy w zapraszaniu go na wspólne posiłki.</p>
   <p><b>Pełne spektrum:</b> zrozumienie, że Boże światło zawsze miało wszystkie kolory, a zmieniała się jedynie nasza zdolność ich dostrzegania.</p>
 </div>
+</article>
 
-<footer>Satyra. Gay Church i „Tęcza Przymierza” nie mają żadnego związku z wydawcami czasopisma „Strażnica” ani ze Świadkami Jehowy. Cytaty biblijne za Biblią Gdańską (1632), miejscami w uproszczeniu.</footer>
+<article id="zyciorys" class="feature">
+  <p class="label">Życiorys</p>
+  <h2 class="title">Przestałem mrużyć oczy</h2>
+  <p class="byline">Opowiada brat Krzysztof K. (postać fikcyjna)</p>
+
+  <p class="lede">Urodziłem się w Kielcach w rodzinie, w której Biblia leżała na honorowym miejscu, zawsze otwarta na tej samej stronie. Mama mówiła, że to dla wygody. Dopiero po latach zrozumiałem, że chodziło o Kapłańską 18:22. Reszty Pisma nikt u nas nie otwierał, żeby nie zgubić zakładki.</p>
+  <p>Przez dwadzieścia lat śpiewałem w chórze parafialnym i cytowałem ten werset każdemu, kto zbyt długo przyglądał się moim swetrom. Robiłem to z przekonaniem. Byłem pewien, że strzegę prawdy. W rzeczywistości strzegłem jednego zdania.</p>
+  <p>Przełom nastąpił w zwyczajny wtorek. Szukałem w Kapłańskiej czegoś, czym mógłbym zawstydzić szwagra, i przypadkiem przewróciłem kartkę. Rozdział 19, werset 19: nie wolno nosić szaty z dwóch rodzajów przędzy. Spojrzałem na metkę swetra. Siedemdziesiąt procent wełny, trzydzieści akrylu.</p>
+
+  <p class="pull">„Przez dwadzieścia lat strzegłem prawdy. W rzeczywistości strzegłem jednego zdania”.</p>
+
+  <p>Tej nocy przeczytałem całą Kapłańską. Potem Ezechiela, Rut i Pierwszą Samuela. Nad ranem doszedłem do Izajasza 56 i obietnicy dla eunuchów, „lepszej niż synowie i córki”. Pamiętam, że płakałem. Częściowo ze wzruszenia, częściowo dlatego, że zdałem sobie sprawę, ile lat zmarnowałem na jeden werset.</p>
+  <p>Dziś usługuję jako starszy w zborze. Moja zakładka leży w Liście do Galacjan 3:28 i staram się jej nie nadużywać. Gdy ktoś cytuje mi Kapłańską, nie kłócę się. Pytam tylko o metkę.</p>
+
+  <figure class="photo">
+    <div class="frame"><img loading="lazy" src="https://images.unsplash.com/photo-1755467228012-27d1c5037c64?w=1400&q=80&auto=format&fit=crop" alt="Tęczowa flaga powiewająca przed budynkiem"></div>
+    <figcaption>„Kiedyś przechodziłem obok tej flagi szybszym krokiem. Dziś wiem, czyj to znak”. <span class="cr">Fot. Valentin / Unsplash</span></figcaption>
+  </figure>
+</article>
+
+<article id="pytania" class="feature qa">
+  <p class="label">Pytania czytelników</p>
+  <p class="qq">Czy brat heteroseksualny może usługiwać w zborze jako starszy?</p>
+  <p>Tak. Pismo wymaga, by nadzorca był „mężem jednej żony” <span class="ref">(1 Tm 3:2)</span>. Zwróćmy uwagę, co ten werset ustala: górną granicę. Brat heteroseksualny, który ma najwyżej jedną żonę, spełnia ten warunek. Bracia w związkach jednopłciowych spełniają go z nawiązką, bo mają żon zero.</p>
+  <p>Pamiętajmy też, że Paweł nie stawiał żadnych wymagań co do orientacji, a Jezus wybrał na apostołów ludzi bardzo różnych, łącznie z poborcą podatków <span class="ref">(Mt 9:9)</span>. Jeśli zbór przyjął poborcę podatków, przyjmie też heteroseksualistę.</p>
+
+  <figure class="photo">
+    <div class="frame"><img loading="lazy" src="https://images.unsplash.com/photo-1758874090144-1db621d9a32a?w=1400&q=80&auto=format&fit=crop" alt="Splecione dłonie dwojga ludzi siedzących obok siebie"></div>
+    <figcaption>Także małżeństwa heteroseksualne mogą zaznawać pokoju, zwłaszcza gdy nauczą się rozwiązywać spory w duchu Efezjan 4:26. <span class="cr">Fot. Vitaly Gariev / Unsplash</span></figcaption>
+  </figure>
+
+  <p>Starsi powinni jednak brać pod uwagę szczególne okoliczności takich braci. Mogą oni potrzebować dodatkowego czasu w okresie świąt, gdy spada na nich obowiązek odwiedzenia dwóch kompletów teściów. Okazujmy im zrozumienie <span class="ref">(Kol 3:12)</span>.</p>
+</article>
+
+<footer>
+  <p>Satyra. Gay Church i „Tęcza Przymierza” nie mają żadnego związku z wydawcami czasopisma „Strażnica” ani ze Świadkami Jehowy. Cytaty biblijne za Biblią Gdańską (1632), miejscami w uproszczeniu.</p>
+  <p>Zdjęcia pochodzą z serwisu Unsplash i są używane na licencji Unsplash. Osoby widoczne na zdjęciach są przypadkowymi modelami i nie mają żadnego związku z Gay Church ani z treścią tego wydania.</p>
+  <ul>
+    <li>Okładka: Coralie Meurice</li>
+    <li>Biblia: Aaron Burden</li>
+    <li>Tęcza nad jeziorem: David Brooke Martin</li>
+    <li>Osoba z książką: Andrik Langfield</li>
+    <li>Para: Brooke Balentine</li>
+    <li>Kolacja: Karl Hedin</li>
+    <li>Parada: Darren Nunis</li>
+    <li>Flaga: Valentin</li>
+    <li>Dłonie: Vitaly Gariev</li>
+  </ul>
+</footer>
 </div>
-
-</body></html>
+</body>
+</html>
